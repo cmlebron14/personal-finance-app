@@ -1,0 +1,20 @@
+.nav {
+  height: 100vh;
+  position: fixed;
+}
+
+.navExpanded {
+  width: 300px;
+}
+
+.navCollapsed {
+  width: 88px;
+}
+
+.appNavExpanded {
+  padding-left: 300px;
+}
+
+.appNavCollapsed {
+  padding-left: 88px;
+}
