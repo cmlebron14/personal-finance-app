@@ -1,20 +1,28 @@
 .nav {
-  height: 100vh;
+  bottom: 0;
+  height: 74px;
   position: fixed;
+  width: 100%;
 }
 
-.navExpanded {
-  width: 300px;
-}
+@media (min-width: 769px) {
+  .nav {
+    height: 100vh;
+  }
 
-.navCollapsed {
-  width: 88px;
-}
+  .navExpanded {
+    width: 300px;
+  }
 
-.appNavExpanded {
-  padding-left: 300px;
-}
+  .navCollapsed {
+    width: 88px;
+  }
 
-.appNavCollapsed {
-  padding-left: 88px;
+  .appNavExpanded {
+    padding-left: 300px;
+  }
+
+  .appNavCollapsed {
+    padding-left: 88px;
+  }
 }
