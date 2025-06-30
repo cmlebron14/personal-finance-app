@@ -1,0 +1,42 @@
+.navbar {
+  align-items: flex-end;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.navItem {
+  max-width: 100px;
+  width: 20%;
+}
+
+.link {
+  border-bottom: solid 4px transparent;
+  border-radius: 8px 8px 0 0;
+  display: block;
+  padding: 9px 0 7px;
+  text-align: center;
+  width: 100%;
+
+  &:hover {
+    color: var(--white);
+  }
+}
+
+.active {
+  background-color: var(--beige-100);
+  border-color: var(--green);
+  color: var(--green);
+
+  &:hover {
+    color: var(--green);
+  }
+}
+
+.text {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
