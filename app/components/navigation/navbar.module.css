@@ -1,36 +1,84 @@
 .navbar {
-  align-items: flex-end;
+  align-items: stretch;
   display: flex;
   list-style-type: none;
   justify-content: space-around;
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1140px) {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .navItem {
+  display: flex;
   max-width: 100px;
   width: 20%;
+
+  @media (min-width: 768px) {
+    max-width: none;
+    width: 104px;
+  }
+
+  @media (min-width: 1140px) {
+    width: 100%;
+  }
 }
 
 .link {
+  align-items: center;
   border-bottom: solid 4px transparent;
   border-radius: 8px 8px 0 0;
-  display: block;
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  justify-content: center;
   padding: 9px 0 7px;
   text-align: center;
   width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1140px) {
+    border-bottom: none;
+    border-left: solid 4px transparent;
+    border-radius: 0 12px 12px 0;
+    flex-direction: row;
+    font-size: 16px;
+    justify-content: flex-start;
+    margin-bottom: 4px;
+    padding: 18px 32px;
+    text-align: left;
+  }
 
   &:hover {
     color: var(--white);
   }
 }
 
+.link svg {
+  flex: none;
+}
+
 .active {
   background-color: var(--beige-100);
   border-color: var(--green);
-  color: var(--green);
+  color: var(--grey-900);
 
   &:hover {
-    color: var(--green);
+    color: var(--grey-900);
   }
+}
+
+.active svg {
+  color: var(--green);
 }
 
 .text {
@@ -38,5 +86,17 @@
 
   @media (min-width: 768px) {
     display: block;
+    margin-top: 7px;
+  }
+
+  @media (min-width: 1140px) {
+    margin-left: 16px;
+    margin-top: 0;
+  }
+}
+
+.closed {
+  @media (min-width: 1140px) {
+    display: none;
   }
 }

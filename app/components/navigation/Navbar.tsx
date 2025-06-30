@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSidebar } from "@/app/context/SidebarContext";
 import OverviewIcon from "@/public/images/icon-nav-overview.svg";
 import TransactionsIcon from "@/public/images/icon-nav-transactions.svg";
 import BudgetsIcon from "@/public/images/icon-nav-budgets.svg";
@@ -11,6 +12,8 @@ const Navbar = () => {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href;
 
+  const { isOpen } = useSidebar();
+
   return (
     <ul className={styles.navbar}>
       <li className={styles.navItem}>
@@ -19,7 +22,9 @@ const Navbar = () => {
           className={`${styles.link} ${isActive("/") ? styles.active : ""}`}
         >
           <OverviewIcon />
-          <span className={styles.text}>Overview</span>
+          <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
+            Overview
+          </span>
         </Link>
       </li>
       <li className={styles.navItem}>
@@ -30,7 +35,9 @@ const Navbar = () => {
           }`}
         >
           <TransactionsIcon />
-          <span className={styles.text}>Transactions</span>
+          <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
+            Transactions
+          </span>
         </Link>
       </li>
       <li className={styles.navItem}>
@@ -41,7 +48,9 @@ const Navbar = () => {
           }`}
         >
           <BudgetsIcon />
-          <span className={styles.text}>Budgets</span>
+          <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
+            Budgets
+          </span>
         </Link>
       </li>
       <li className={styles.navItem}>
@@ -50,7 +59,9 @@ const Navbar = () => {
           className={`${styles.link} ${isActive("/pots") ? styles.active : ""}`}
         >
           <PotsIcon />
-          <span className={styles.text}>Pots</span>
+          <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
+            Pots
+          </span>
         </Link>
       </li>
       <li className={styles.navItem}>
@@ -61,7 +72,9 @@ const Navbar = () => {
           }`}
         >
           <BillsIcon />
-          <span className={styles.text}>Recurring Bills</span>
+          <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
+            Recurring Bills
+          </span>
         </Link>
       </li>
     </ul>

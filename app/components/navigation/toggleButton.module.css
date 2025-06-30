@@ -1,0 +1,35 @@
+.button {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--grey-300);
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: 58px;
+  padding: 19px 32px;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.button svg {
+  flex: none;
+}
+
+.buttonClosed svg {
+  transform: rotate(180deg);
+}
+
+.text {
+  margin-left: 20px;
+}
+
+.textClosed {
+  @media (min-width: 1140px) {
+    display: none;
+  }
+}
