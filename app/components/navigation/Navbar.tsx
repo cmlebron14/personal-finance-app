@@ -21,7 +21,9 @@ const Navbar = () => {
           href="/"
           className={`${styles.link} ${isActive("/") ? styles.active : ""}`}
         >
-          <OverviewIcon />
+          <div className={styles.svgWrapper}>
+            <OverviewIcon />
+          </div>
           <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
             Overview
           </span>
@@ -34,7 +36,9 @@ const Navbar = () => {
             isActive("/transactions") ? styles.active : ""
           }`}
         >
-          <TransactionsIcon />
+          <div className={styles.svgWrapper}>
+            <TransactionsIcon />
+          </div>
           <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
             Transactions
           </span>
@@ -47,7 +51,9 @@ const Navbar = () => {
             isActive("/budgets") ? styles.active : ""
           }`}
         >
-          <BudgetsIcon />
+          <div className={styles.svgWrapper}>
+            <BudgetsIcon />
+          </div>
           <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
             Budgets
           </span>
@@ -58,7 +64,9 @@ const Navbar = () => {
           href="/pots"
           className={`${styles.link} ${isActive("/pots") ? styles.active : ""}`}
         >
-          <PotsIcon />
+          <div className={styles.svgWrapper}>
+            <PotsIcon />
+          </div>
           <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
             Pots
           </span>
@@ -71,7 +79,9 @@ const Navbar = () => {
             isActive("/recurring-bills") ? styles.active : ""
           }`}
         >
-          <BillsIcon />
+          <div className={styles.svgWrapper}>
+            <BillsIcon />
+          </div>
           <span className={`${styles.text} ${isOpen ? "" : styles.closed}`}>
             Recurring Bills
           </span>
